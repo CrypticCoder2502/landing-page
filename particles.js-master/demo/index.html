@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+   #nav {
+  position:absolute;
+  top: 5%;
+  left: 88%;
+  color: #fff;
+  z-index: 9999;
+  word-spacing: 10px;
+  
+}
+
+  #hello {
+  position:absolute;
+  top: 35%;
+  left: 38%;
+  color: #fff;
+  z-index: 9999;
+  word-spacing: 10px;
+ 
+}
+ #hi {
+  position:absolute;
+  top: 40%;
+  left: 30%;
+  color: #fff;
+  z-index: 9999;
+  word-spacing: 10px;
+  
+}
+
+#bye {
+  position:absolute;
+  top: 50%;
+  left: 39%;
+  color: #fff;
+  z-index: 9999;
+  word-spacing: 10px;
+}
+ #date {
+  position:absolute;
+  top: 60%;
+  left: 30%;
+  color: #fff;
+  z-index: 9999;
+  word-spacing: 10px;
+ 
+}
+
+   #logo {
+  position:absolute;
+  top: 5%;
+  left: 3%;
+  color: #fff;
+  z-index: 9999;
+  
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f00;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #fff;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  position:absolute;
+  z-index: 9999;
+ 
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #d11919;
+  color: white;
+  top: 30%;
+  left: 2%;
+}
+
+.fa-twitter {
+  background: #d11919;
+  color: white;
+  top: 45%;
+  left: 2%;
+}
+
+.fa-linkedin {
+  background: #d11919;
+  color: white;
+  top: 60%;
+  left: 2%;
+}
+
+.fa-instagram {
+  background: #d11919;
+  color: white;
+  top: 75%;
+  left: 2%;
+}
+</style>
+</head>
+<body>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<div id="nav" class="fadeIn">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"><font size="5">MENU</font> &#9776; </span>
+</div>	
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+</script>
+
+<div id="hello"  class="slideLeft"><FONT SIZE="5" style="font-family: 'ZCOOL KuaiLe', cursive;"><b>FRUGALITY IN INNOVATION</b> </FONT>
+
+
+</div>
+<div id="hi"  class="slideRight"><br>
+<font size="9" style="font-family: 'ZCOOL KuaiLe', cursive;"> <b>Entrepreneurship Summit </b></font>
+</div>
+
+<div id="bye" class="slideExpandUp"><br>
+<font size="9" style="font-family: 'ZCOOL KuaiLe', cursive;">H.B.T.U Kanpur</font>
+</div>
+
+<div id="date" class="bigEntrance"><br>
+<font size="9" style="font-family: 'ZCOOL KuaiLe', cursive;">9th and 10th Feb, 2019</font>
+</div>
+
+
+<div id="logo"`class="hatch">
+<img src="logo.png" height="100" width="220">
+</div>
+<div id="social" class="fadeIn">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-linkedin"></a>
+</div>
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
